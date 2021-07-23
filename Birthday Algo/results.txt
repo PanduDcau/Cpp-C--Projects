@@ -1,0 +1,440 @@
+ 
+ My Birthday Pattern is (980206)  
+
+Pattern Matching In Naive Algorithm 
+
+No 1 Pattern Found At Index : 1610901
+No 2 Pattern Found At Index : 1627513
+No 3 Pattern Found At Index : 2672931
+No 4 Pattern Found At Index : 2811193
+No 5 Pattern Found At Index : 3615354
+No 6 Pattern Found At Index : 3899348
+No 7 Pattern Found At Index : 4260333
+No 8 Pattern Found At Index : 6171036
+No 9 Pattern Found At Index : 7932895
+No 10 Pattern Found At Index : 9617780
+No 11 Pattern Found At Index : 12013625
+No 12 Pattern Found At Index : 14216726
+No 13 Pattern Found At Index : 14233211
+No 14 Pattern Found At Index : 15695397
+No 15 Pattern Found At Index : 15953070
+No 16 Pattern Found At Index : 16238325
+No 17 Pattern Found At Index : 18130371
+No 18 Pattern Found At Index : 19416742
+No 19 Pattern Found At Index : 19627017
+No 20 Pattern Found At Index : 19911103
+No 21 Pattern Found At Index : 21435659
+No 22 Pattern Found At Index : 21761510
+No 23 Pattern Found At Index : 22999845
+No 24 Pattern Found At Index : 24466652
+No 25 Pattern Found At Index : 24591315
+No 26 Pattern Found At Index : 25847781
+No 27 Pattern Found At Index : 25951725
+No 28 Pattern Found At Index : 28388164
+No 29 Pattern Found At Index : 29082031
+No 30 Pattern Found At Index : 30101974
+No 31 Pattern Found At Index : 30268041
+No 32 Pattern Found At Index : 32143408
+No 33 Pattern Found At Index : 34553869
+No 34 Pattern Found At Index : 34760987
+No 35 Pattern Found At Index : 34797005
+No 36 Pattern Found At Index : 34974855
+No 37 Pattern Found At Index : 35325472
+No 38 Pattern Found At Index : 37212529
+No 39 Pattern Found At Index : 37866016
+No 40 Pattern Found At Index : 38420604
+No 41 Pattern Found At Index : 38778787
+No 42 Pattern Found At Index : 39179590
+No 43 Pattern Found At Index : 39585534
+No 44 Pattern Found At Index : 42200392
+No 45 Pattern Found At Index : 43172491
+No 46 Pattern Found At Index : 43306729
+No 47 Pattern Found At Index : 43394085
+No 48 Pattern Found At Index : 43649991
+No 49 Pattern Found At Index : 44053971
+No 50 Pattern Found At Index : 44657131
+No 51 Pattern Found At Index : 45274567
+No 52 Pattern Found At Index : 45847278
+No 53 Pattern Found At Index : 46492171
+No 54 Pattern Found At Index : 49937479
+No 55 Pattern Found At Index : 50076087
+No 56 Pattern Found At Index : 51775917
+No 57 Pattern Found At Index : 52810976
+No 58 Pattern Found At Index : 54717039
+No 59 Pattern Found At Index : 54911108
+No 60 Pattern Found At Index : 56552436
+No 61 Pattern Found At Index : 58715277
+No 62 Pattern Found At Index : 60008249
+No 63 Pattern Found At Index : 60099335
+No 64 Pattern Found At Index : 63071300
+No 65 Pattern Found At Index : 66041478
+No 66 Pattern Found At Index : 66146401
+No 67 Pattern Found At Index : 66697548
+No 68 Pattern Found At Index : 67932707
+No 69 Pattern Found At Index : 68534637
+No 70 Pattern Found At Index : 71041693
+No 71 Pattern Found At Index : 72766389
+No 72 Pattern Found At Index : 73747413
+No 73 Pattern Found At Index : 73871758
+No 74 Pattern Found At Index : 73910369
+No 75 Pattern Found At Index : 76941928
+No 76 Pattern Found At Index : 78791412
+No 77 Pattern Found At Index : 78871149
+No 78 Pattern Found At Index : 79209073
+No 79 Pattern Found At Index : 80182827
+No 80 Pattern Found At Index : 80313748
+No 81 Pattern Found At Index : 82354962
+No 82 Pattern Found At Index : 83562985
+No 83 Pattern Found At Index : 83752852
+No 84 Pattern Found At Index : 84879503
+No 85 Pattern Found At Index : 85165692
+No 86 Pattern Found At Index : 85728006
+No 87 Pattern Found At Index : 86640585
+No 88 Pattern Found At Index : 86649318
+No 89 Pattern Found At Index : 87317856
+No 90 Pattern Found At Index : 87798765
+No 91 Pattern Found At Index : 90002864
+No 92 Pattern Found At Index : 90319377
+No 93 Pattern Found At Index : 92062140
+No 94 Pattern Found At Index : 93343650
+No 95 Pattern Found At Index : 94177331
+No 96 Pattern Found At Index : 94541894
+No 97 Pattern Found At Index : 94721777
+No 98 Pattern Found At Index : 95863408
+No 99 Pattern Found At Index : 96012082
+No 100 Pattern Found At Index : 97078389
+No 101 Pattern Found At Index : 97498395
+No 102 Pattern Found At Index : 98348868
+No 103 Pattern Found At Index : 98624365
+No 104 Pattern Found At Index : 98702542
+	 No of Matches is 104
+
+ My Birthday Pattern is (980206)  
+
+Pattern Matching In KMP Algorithm 
+
+No 1 Found pattern at index : 1610901
+No 2 Found pattern at index : 1627513
+No 3 Found pattern at index : 2672931
+No 4 Found pattern at index : 2811193
+No 5 Found pattern at index : 3615354
+No 6 Found pattern at index : 3899348
+No 7 Found pattern at index : 4260333
+No 8 Found pattern at index : 6171036
+No 9 Found pattern at index : 7932895
+No 10 Found pattern at index : 9617780
+No 11 Found pattern at index : 12013625
+No 12 Found pattern at index : 14216726
+No 13 Found pattern at index : 14233211
+No 14 Found pattern at index : 15695397
+No 15 Found pattern at index : 15953070
+No 16 Found pattern at index : 16238325
+No 17 Found pattern at index : 18130371
+No 18 Found pattern at index : 19416742
+No 19 Found pattern at index : 19627017
+No 20 Found pattern at index : 19911103
+No 21 Found pattern at index : 21435659
+No 22 Found pattern at index : 21761510
+No 23 Found pattern at index : 22999845
+No 24 Found pattern at index : 24466652
+No 25 Found pattern at index : 24591315
+No 26 Found pattern at index : 25847781
+No 27 Found pattern at index : 25951725
+No 28 Found pattern at index : 28388164
+No 29 Found pattern at index : 29082031
+No 30 Found pattern at index : 30101974
+No 31 Found pattern at index : 30268041
+No 32 Found pattern at index : 32143408
+No 33 Found pattern at index : 34553869
+No 34 Found pattern at index : 34760987
+No 35 Found pattern at index : 34797005
+No 36 Found pattern at index : 34974855
+No 37 Found pattern at index : 35325472
+No 38 Found pattern at index : 37212529
+No 39 Found pattern at index : 37866016
+No 40 Found pattern at index : 38420604
+No 41 Found pattern at index : 38778787
+No 42 Found pattern at index : 39179590
+No 43 Found pattern at index : 39585534
+No 44 Found pattern at index : 42200392
+No 45 Found pattern at index : 43172491
+No 46 Found pattern at index : 43306729
+No 47 Found pattern at index : 43394085
+No 48 Found pattern at index : 43649991
+No 49 Found pattern at index : 44053971
+No 50 Found pattern at index : 44657131
+No 51 Found pattern at index : 45274567
+No 52 Found pattern at index : 45847278
+No 53 Found pattern at index : 46492171
+No 54 Found pattern at index : 49937479
+No 55 Found pattern at index : 50076087
+No 56 Found pattern at index : 51775917
+No 57 Found pattern at index : 52810976
+No 58 Found pattern at index : 54717039
+No 59 Found pattern at index : 54911108
+No 60 Found pattern at index : 56552436
+No 61 Found pattern at index : 58715277
+No 62 Found pattern at index : 60008249
+No 63 Found pattern at index : 60099335
+No 64 Found pattern at index : 63071300
+No 65 Found pattern at index : 66041478
+No 66 Found pattern at index : 66146401
+No 67 Found pattern at index : 66697548
+No 68 Found pattern at index : 67932707
+No 69 Found pattern at index : 68534637
+No 70 Found pattern at index : 71041693
+No 71 Found pattern at index : 72766389
+No 72 Found pattern at index : 73747413
+No 73 Found pattern at index : 73871758
+No 74 Found pattern at index : 73910369
+No 75 Found pattern at index : 76941928
+No 76 Found pattern at index : 78791412
+No 77 Found pattern at index : 78871149
+No 78 Found pattern at index : 79209073
+No 79 Found pattern at index : 80182827
+No 80 Found pattern at index : 80313748
+No 81 Found pattern at index : 82354962
+No 82 Found pattern at index : 83562985
+No 83 Found pattern at index : 83752852
+No 84 Found pattern at index : 84879503
+No 85 Found pattern at index : 85165692
+No 86 Found pattern at index : 85728006
+No 87 Found pattern at index : 86640585
+No 88 Found pattern at index : 86649318
+No 89 Found pattern at index : 87317856
+No 90 Found pattern at index : 87798765
+No 91 Found pattern at index : 90002864
+No 92 Found pattern at index : 90319377
+No 93 Found pattern at index : 92062140
+No 94 Found pattern at index : 93343650
+No 95 Found pattern at index : 94177331
+No 96 Found pattern at index : 94541894
+No 97 Found pattern at index : 94721777
+No 98 Found pattern at index : 95863408
+No 99 Found pattern at index : 96012082
+No 100 Found pattern at index : 97078389
+No 101 Found pattern at index : 97498395
+No 102 Found pattern at index : 98348868
+No 103 Found pattern at index : 98624365
+No 104 Found pattern at index : 98702542
+	 No of Matches is 104
+
+ My Birthday Pattern is (980206) 
+ 
+String Matching in Boyer Moore Algorithm :
+
+No 1 Pattern Occurs At Shift : 1610901
+No 2 Pattern Occurs At Shift : 1627513
+No 3 Pattern Occurs At Shift : 2672931
+No 4 Pattern Occurs At Shift : 2811193
+No 5 Pattern Occurs At Shift : 3615354
+No 6 Pattern Occurs At Shift : 3899348
+No 7 Pattern Occurs At Shift : 4260333
+No 8 Pattern Occurs At Shift : 6171036
+No 9 Pattern Occurs At Shift : 7932895
+No 10 Pattern Occurs At Shift : 9617780
+No 11 Pattern Occurs At Shift : 12013625
+No 12 Pattern Occurs At Shift : 14216726
+No 13 Pattern Occurs At Shift : 14233211
+No 14 Pattern Occurs At Shift : 15695397
+No 15 Pattern Occurs At Shift : 15953070
+No 16 Pattern Occurs At Shift : 16238325
+No 17 Pattern Occurs At Shift : 18130371
+No 18 Pattern Occurs At Shift : 19416742
+No 19 Pattern Occurs At Shift : 19627017
+No 20 Pattern Occurs At Shift : 19911103
+No 21 Pattern Occurs At Shift : 21435659
+No 22 Pattern Occurs At Shift : 21761510
+No 23 Pattern Occurs At Shift : 22999845
+No 24 Pattern Occurs At Shift : 24466652
+No 25 Pattern Occurs At Shift : 24591315
+No 26 Pattern Occurs At Shift : 25847781
+No 27 Pattern Occurs At Shift : 25951725
+No 28 Pattern Occurs At Shift : 28388164
+No 29 Pattern Occurs At Shift : 29082031
+No 30 Pattern Occurs At Shift : 30101974
+No 31 Pattern Occurs At Shift : 30268041
+No 32 Pattern Occurs At Shift : 32143408
+No 33 Pattern Occurs At Shift : 34553869
+No 34 Pattern Occurs At Shift : 34760987
+No 35 Pattern Occurs At Shift : 34797005
+No 36 Pattern Occurs At Shift : 34974855
+No 37 Pattern Occurs At Shift : 35325472
+No 38 Pattern Occurs At Shift : 37212529
+No 39 Pattern Occurs At Shift : 37866016
+No 40 Pattern Occurs At Shift : 38420604
+No 41 Pattern Occurs At Shift : 38778787
+No 42 Pattern Occurs At Shift : 39179590
+No 43 Pattern Occurs At Shift : 39585534
+No 44 Pattern Occurs At Shift : 42200392
+No 45 Pattern Occurs At Shift : 43172491
+No 46 Pattern Occurs At Shift : 43306729
+No 47 Pattern Occurs At Shift : 43394085
+No 48 Pattern Occurs At Shift : 43649991
+No 49 Pattern Occurs At Shift : 44053971
+No 50 Pattern Occurs At Shift : 44657131
+No 51 Pattern Occurs At Shift : 45274567
+No 52 Pattern Occurs At Shift : 45847278
+No 53 Pattern Occurs At Shift : 46492171
+No 54 Pattern Occurs At Shift : 49937479
+No 55 Pattern Occurs At Shift : 50076087
+No 56 Pattern Occurs At Shift : 51775917
+No 57 Pattern Occurs At Shift : 52810976
+No 58 Pattern Occurs At Shift : 54717039
+No 59 Pattern Occurs At Shift : 54911108
+No 60 Pattern Occurs At Shift : 56552436
+No 61 Pattern Occurs At Shift : 58715277
+No 62 Pattern Occurs At Shift : 60008249
+No 63 Pattern Occurs At Shift : 60099335
+No 64 Pattern Occurs At Shift : 63071300
+No 65 Pattern Occurs At Shift : 66041478
+No 66 Pattern Occurs At Shift : 66146401
+No 67 Pattern Occurs At Shift : 66697548
+No 68 Pattern Occurs At Shift : 67932707
+No 69 Pattern Occurs At Shift : 68534637
+No 70 Pattern Occurs At Shift : 71041693
+No 71 Pattern Occurs At Shift : 72766389
+No 72 Pattern Occurs At Shift : 73747413
+No 73 Pattern Occurs At Shift : 73871758
+No 74 Pattern Occurs At Shift : 73910369
+No 75 Pattern Occurs At Shift : 76941928
+No 76 Pattern Occurs At Shift : 78791412
+No 77 Pattern Occurs At Shift : 78871149
+No 78 Pattern Occurs At Shift : 79209073
+No 79 Pattern Occurs At Shift : 80182827
+No 80 Pattern Occurs At Shift : 80313748
+No 81 Pattern Occurs At Shift : 82354962
+No 82 Pattern Occurs At Shift : 83562985
+No 83 Pattern Occurs At Shift : 83752852
+No 84 Pattern Occurs At Shift : 84879503
+No 85 Pattern Occurs At Shift : 85165692
+No 86 Pattern Occurs At Shift : 85728006
+No 87 Pattern Occurs At Shift : 86640585
+No 88 Pattern Occurs At Shift : 86649318
+No 89 Pattern Occurs At Shift : 87317856
+No 90 Pattern Occurs At Shift : 87798765
+No 91 Pattern Occurs At Shift : 90002864
+No 92 Pattern Occurs At Shift : 90319377
+No 93 Pattern Occurs At Shift : 92062140
+No 94 Pattern Occurs At Shift : 93343650
+No 95 Pattern Occurs At Shift : 94177331
+No 96 Pattern Occurs At Shift : 94541894
+No 97 Pattern Occurs At Shift : 94721777
+No 98 Pattern Occurs At Shift : 95863408
+No 99 Pattern Occurs At Shift : 96012082
+No 100 Pattern Occurs At Shift : 97078389
+No 101 Pattern Occurs At Shift : 97498395
+No 102 Pattern Occurs At Shift : 98348868
+No 103 Pattern Occurs At Shift : 98624365
+No 104 Pattern Occurs At Shift : 98702542
+	 No of Matches is 104
+ 
+ My Birthday Pattern is (980206) 
+ 
+String Matching in Robin Karp Algorithm :
+
+No 1 Pattern Found At Index :1610901
+No 2 Pattern Found At Index :1627513
+No 3 Pattern Found At Index :2672931
+No 4 Pattern Found At Index :2811193
+No 5 Pattern Found At Index :3615354
+No 6 Pattern Found At Index :3899348
+No 7 Pattern Found At Index :4260333
+No 8 Pattern Found At Index :6171036
+No 9 Pattern Found At Index :7932895
+No 10 Pattern Found At Index :9617780
+No 11 Pattern Found At Index :12013625
+No 12 Pattern Found At Index :14216726
+No 13 Pattern Found At Index :14233211
+No 14 Pattern Found At Index :15695397
+No 15 Pattern Found At Index :15953070
+No 16 Pattern Found At Index :16238325
+No 17 Pattern Found At Index :18130371
+No 18 Pattern Found At Index :19416742
+No 19 Pattern Found At Index :19627017
+No 20 Pattern Found At Index :19911103
+No 21 Pattern Found At Index :21435659
+No 22 Pattern Found At Index :21761510
+No 23 Pattern Found At Index :22999845
+No 24 Pattern Found At Index :24466652
+No 25 Pattern Found At Index :24591315
+No 26 Pattern Found At Index :25847781
+No 27 Pattern Found At Index :25951725
+No 28 Pattern Found At Index :28388164
+No 29 Pattern Found At Index :29082031
+No 30 Pattern Found At Index :30101974
+No 31 Pattern Found At Index :30268041
+No 32 Pattern Found At Index :32143408
+No 33 Pattern Found At Index :34553869
+No 34 Pattern Found At Index :34760987
+No 35 Pattern Found At Index :34797005
+No 36 Pattern Found At Index :34974855
+No 37 Pattern Found At Index :35325472
+No 38 Pattern Found At Index :37212529
+No 39 Pattern Found At Index :37866016
+No 40 Pattern Found At Index :38420604
+No 41 Pattern Found At Index :38778787
+No 42 Pattern Found At Index :39179590
+No 43 Pattern Found At Index :39585534
+No 44 Pattern Found At Index :42200392
+No 45 Pattern Found At Index :43172491
+No 46 Pattern Found At Index :43306729
+No 47 Pattern Found At Index :43394085
+No 48 Pattern Found At Index :43649991
+No 49 Pattern Found At Index :44053971
+No 50 Pattern Found At Index :44657131
+No 51 Pattern Found At Index :45274567
+No 52 Pattern Found At Index :45847278
+No 53 Pattern Found At Index :46492171
+No 54 Pattern Found At Index :49937479
+No 55 Pattern Found At Index :50076087
+No 56 Pattern Found At Index :51775917
+No 57 Pattern Found At Index :52810976
+No 58 Pattern Found At Index :54717039
+No 59 Pattern Found At Index :54911108
+No 60 Pattern Found At Index :56552436
+No 61 Pattern Found At Index :58715277
+No 62 Pattern Found At Index :60008249
+No 63 Pattern Found At Index :60099335
+No 64 Pattern Found At Index :63071300
+No 65 Pattern Found At Index :66041478
+No 66 Pattern Found At Index :66146401
+No 67 Pattern Found At Index :66697548
+No 68 Pattern Found At Index :67932707
+No 69 Pattern Found At Index :68534637
+No 70 Pattern Found At Index :71041693
+No 71 Pattern Found At Index :72766389
+No 72 Pattern Found At Index :73747413
+No 73 Pattern Found At Index :73871758
+No 74 Pattern Found At Index :73910369
+No 75 Pattern Found At Index :76941928
+No 76 Pattern Found At Index :78791412
+No 77 Pattern Found At Index :78871149
+No 78 Pattern Found At Index :79209073
+No 79 Pattern Found At Index :80182827
+No 80 Pattern Found At Index :80313748
+No 81 Pattern Found At Index :82354962
+No 82 Pattern Found At Index :83562985
+No 83 Pattern Found At Index :83752852
+No 84 Pattern Found At Index :84879503
+No 85 Pattern Found At Index :85165692
+No 86 Pattern Found At Index :85728006
+No 87 Pattern Found At Index :86640585
+No 88 Pattern Found At Index :86649318
+No 89 Pattern Found At Index :87317856
+No 90 Pattern Found At Index :87798765
+No 91 Pattern Found At Index :90002864
+No 92 Pattern Found At Index :90319377
+No 93 Pattern Found At Index :92062140
+No 94 Pattern Found At Index :93343650
+No 95 Pattern Found At Index :94177331
+No 96 Pattern Found At Index :94541894
+No 97 Pattern Found At Index :94721777
+No 98 Pattern Found At Index :95863408
+No 99 Pattern Found At Index :96012082
+No 100 Pattern Found At Index :97078389
+No 101 Pattern Found At Index :97498395
+No 102 Pattern Found At Index :98348868
+No 103 Pattern Found At Index :98624365
+No 104 Pattern Found At Index :98702542
+	 No of Matches is 104
