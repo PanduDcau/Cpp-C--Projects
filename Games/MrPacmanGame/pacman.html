@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Pacman Game</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: Impact, sans-serif;
+            color: white;
+        }
+        #game-board {
+            width: 400px;
+            height: 300px;
+            background-color: black;
+            position: relative;
+            margin: 20px auto;
+        }
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: yellow;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .big-dot {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .pacman {
+            width: 20px;
+            height: 20px;
+            background-image: url('https://i.giphy.com/4aObKjtPMlWwklyr6n.webp');
+            background-size: cover;
+            position: absolute;
+            transform: rotate(0deg);
+        }
+        .ghost {
+            width: 20px;
+            height: 20px;
+            background-image: url('https://media.tenor.com/smolqUG8yFgAAAAi/oacmn.gif');
+            background-size: cover;
+            position: absolute;
+        }
+        #score {
+            margin-top: 10px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #countdown, #game-over {
+            font-size: 30px;
+            text-align: center;
+            color: red;
+            height: 36px;
+        }
+        #level-select {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="countdown">3</div>
+    <div id="game-board"></div>
+    <div id="score">Score: 0</div>
+    <div id="game-over" class="hidden">Game Over</div>
+    <div id="level-select">
+        <button onclick="startLevel(1)">Level 1</button>
+        <button onclick="startLevel(2)">Level 2</button>
+        <button onclick="startLevel(3)">Level 3</button>
+    </div>
+    <audio id="munch-sound" src="pacman_chomp.wav"></audio>
+    <audio id="death-sound" src="pacman_death.wav"></audio>
+    <audio id="beginning-sound" src="pacman_beginning.wav"></audio>
+    <script>
+        const gameBoard = document.getElementById('game-board');
+        const scoreDisplay = document.getElementById('score');
+        const countdownDisplay = document.getElementById('countdown');
+        const gameOverDisplay = document.getElementById('game-over');
+        const levelSelect = document.getElementById('level-select');
+        const munchSound = document.getElementById('munch-sound');
+        const deathSound = document.getElementById('death-sound');
+        const beginningSound = document.getElementById('beginning-sound');
+        let score = 0;
+        let pacman, pacmanInterval, ghostInterval;
+        let direction = { x: 1, y: 0 }; // Initial direction to the right
+        let rotation = 0; // Initial rotation for Pacman
+        let countdown = 3;
+        let speed = 200; // Default speed
+        let ghosts = 2; // Default number of ghosts
+        let bigDots = 10; // Number of big dots
+        const maze = [
+            [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+            [1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,1],
+            [1,0,1,1,0,1,0,1,1,1,1,1,0,1,0,1,1,1,0,1],
+            [1,0,1,1,0,1,0,1,1,1,1,1,0,1,0,1,1,1,0,1],
+            [1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,1,1,0,1,0,1,1,0,1,1,0,1,0,1,1,0,1,1],
+            [1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,1],
+            [1,1,1,1,0,1,0,1,1,1,1,1,0,1,0,1,1,1,0,1],
+            [1,1,1,1,0,1,0,0,0,0,0,0,0,0,0,1,1,1,0,1],
+            [1,0,0,0,0,1,0,1,1,1,1,1,0,1,0,0,0,0,0,1],
+            [1,0,1,1,0,1,0,1,1,1,1,1,0,1,0,1,1,1,0,1],
+            [1,0,1,1,0,1,0,0,0,0,0,0,0,1,0,1,1,1,0,1],
+            [1,0,1,1,0,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+        ];
+
+        const ghostDirections = [
+            { x: 1, y: 0 },
+            { x: -1, y: 0 },
+            { x: 0, y: 1 },
+            { x: 0, y: -1 }
+        ];
+
+        function startLevel(level) {
+            levelSelect.classList.add('hidden');
+            switch (level) {
+                case 1:
+                    speed = 200;
+                    ghosts = 2;
+                    break;
+                case 2:
+                    speed = 150;
+                    ghosts = 3;
+                    break;
+                case 3:
+                    speed = 100;
+                    ghosts = 4;
+                    break;
+            }
+            initGame();
+            startCountdown();
+        }
+
+        function initGame() {
+            // Create the maze
+            for (let y = 0; y < maze.length; y++) {
+                for (let x = 0; x < maze[y].length; x++) {
+                    if (maze[y][x] === 1) {
+                        const wall = document.createElement('div');
+                        wall.style.width = '20px';
+                        wall.style.height = '20px';
+                        wall.style.backgroundColor = 'blue';
+                        wall.style.position = 'absolute';
+                        wall.style.top = `${y * 20}px`;
+                        wall.style.left = `${x * 20}px`;
+                        gameBoard.appendChild(wall);
+                    } else {
+                        if (bigDots > 0 && Math.random() < 0.1) {
+                            const bigDot = document.createElement('div');
+                            bigDot.classList.add('big-dot');
+                            bigDot.style.top = `${y * 20}px`;
+                            bigDot.style.left = `${x * 20}px`;
+                            gameBoard.appendChild(bigDot);
+                            bigDots--;
+                        } else {
+                            const dot = document.createElement('div');
+                            dot.classList.add('dot');
+                            dot.style.top = `${y * 20 + 5}px`;
+                            dot.style.left = `${x * 20 + 5}px`;
+                            gameBoard.appendChild(dot);
+                        }
+                    }
+                }
+            }
+
+            // Create Pacman
+            pacman = document.createElement('div');
+            pacman.classList.add('pacman');
+            pacman.style.top = '280px';
+            pacman.style.left = '20px';
+            gameBoard.appendChild(pacman);
+
+            // Create Ghosts
+            for (let i = 0; i < ghosts; i++) {
+                createGhost(`ghost${i}`, `${60 + i * 40}px`, `${60 + i * 40}px`);
+            }
+        }
+
+        function createGhost(id, top, left) {
+            const ghost = document.createElement('div');
+            ghost.id = id;
+            ghost.classList.add('ghost');
+            ghost.style.top = top;
+            ghost.style.left = left;
+            gameBoard.appendChild(ghost);
+        }
+
+        function startGame() {
+            direction = { x: 1, y: 0 }; // Start moving to the right
+            pacmanInterval = setInterval(movePacman, speed);
+            ghostInterval = setInterval(moveGhosts, speed * 2);
+        }
+
+        function movePacman() {
+            let top = parseInt(pacman.style.top);
+            let left = parseInt(pacman.style.left);
+            let newTop = top + direction.y * 20;
+            let newLeft = left + direction.x * 20;
+            if (canMoveTo(newTop, newLeft)) {
+                pacman.style.top = `${newTop}px`;
+                pacman.style.left = `${newLeft}px`;
+                checkCollisions();
+            } else {
+                gameOver();
+            }
+        }
+
+        function moveGhosts() {
+            const ghosts = document.querySelectorAll('.ghost');
+            ghosts.forEach(ghost => {
+                let top = parseInt(ghost.style.top);
+                let left = parseInt(ghost.style.left);
+                let dir, newTop, newLeft;
+                do {
+                    dir = ghostDirections[Math.floor(Math.random() * ghostDirections.length)];
+                    newTop = top + dir.y * 20;
+                    newLeft = left + dir.x * 20;
+                } while (!canMoveTo(newTop, newLeft));
+                ghost.style.top = `${newTop}px`;
+                ghost.style.left = `${newLeft}px`;
+                checkGhostCollision(ghost);
+            });
+        }
+
+        function canMoveTo(top, left) {
+            const row = top / 20;
+            const col = left / 20;
+            return maze[row][col] === 0;
+        }
+
+        function checkCollisions() {
+            const dots = document.querySelectorAll('.dot, .big-dot');
+            dots.forEach(dot => {
+                if (isColliding(pacman, dot)) {
+                    dot.classList.contains('big-dot') ? score += 10 : score++;
+                    dot.remove();
+                    scoreDisplay.textContent = `Score: ${score}`;
+                    munchSound.play();
+                }
+            });
+        }
+
+        function checkGhostCollision(ghost) {
+            if (isColliding(pacman, ghost)) {
+                gameOver();
+            }
+        }
+
+        function isColliding(a, b) {
+            const aRect = a.getBoundingClientRect();
+            const bRect = b.getBoundingClientRect();
+            return !(
+                aRect.top > bRect.bottom ||
+                aRect.bottom < bRect.top ||
+                aRect.left > bRect.right ||
+                aRect.right < bRect.left
+            );
+        }
+
+        function gameOver() {
+            clearInterval(pacmanInterval);
+            clearInterval(ghostInterval);
+            gameOverDisplay.classList.remove('hidden');
+            deathSound.play();
+        }
+
+        function restartGame() {
+            gameBoard.innerHTML = '';
+            score = 0;
+            scoreDisplay.textContent = `Score: ${score}`;
+            countdown = 3;
+            countdownDisplay.textContent = countdown;
+            gameOverDisplay.classList.add('hidden');
+            levelSelect.classList.remove('hidden');
+        }
+
+        function startCountdown() {
+            beginningSound.play();
+            const countdownInterval = setInterval(() => {
+                countdown--;
+                if (countdown === 0) {
+                    clearInterval(countdownInterval);
+                    countdownDisplay.textContent = '';
+                    startGame();
+                } else {
+                    countdownDisplay.textContent = countdown;
+                }
+            }, 1000);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            switch (e.key) {
+                case 'ArrowUp':
+                    if (direction.y === 0) {
+                        direction = { x: 0, y: -1 };
+                        rotation = -90;
+                    }
+                    break;
+                case 'ArrowDown':
+                    if (direction.y === 0) {
+                        direction = { x: 0, y: 1 };
+                        rotation = 90;
+                    }
+                    break;
+                case 'ArrowLeft':
+                    if (direction.x === 0) {
+                        direction = { x: -1, y: 0 };
+                        rotation = -180;
+                    }
+                    break;
+                case 'ArrowRight':
+                    if (direction.x === 0) {
+                        direction = { x: 1, y: 0 };
+                        rotation = 0;
+                    }
+                    break;
+            }
+            pacman.style.transform = `rotate(${rotation}deg)`;
+        });
+    </script>
+</body>
+</html>
